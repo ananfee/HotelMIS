@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Чтобы модальное окно было поверх всего */
+  padding: 40px; /* Added padding for overlay */
+  box-sizing: border-box; /* Include padding in width/height */
+
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 16px;
+  width: 800px; /* Ширина как на макете */
+  max-width: 100%; /* Адаптивность - was 90% */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Обрезаем контент, выходящий за границы */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  color:#230608;
+  padding-top: 2px;
+  margin-top: -15px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color:#230608;
+  align-items: center;
+  margin-top: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #888;
+  padding: 0;
+  margin: 0;
+  height: 45px; /* Пример, подберите под размер кнопки */
+  line-height: 45px;
+}
+
+.close-button svg {
+         position: relative; /* Делает SVG позиционируемым */
+         top: -2px; /* Подкорректируйте значение, чтобы выровнять крестик */
+       }
+
+.modal-body {
+  padding: 0 40px 0px 40px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Две колонки */
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.scrollable-area > div:last-child .form-grid {
+  margin-bottom: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.form-group label {
+  margin-bottom: 4px;
+  font-size: 0.9em;
+  color: #555;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-group input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  margin-top: 20px;
+}
+
+.checkbox-label input {
+  margin-right: 8px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  accent-color: #230608;
+  transform: scale(1.2); /* Увеличивает размер чекбокса и галочки */
+  width: 14px;            /* Необязательно, но можно задать точный размер */
+  height: 14px;
+}
+
+.modal-footer {
+  padding: 16px 40px;
+  display: flex;
+  justify-content: flex-start; /* Выравниваем элементы слева */
+  align-items: center;
+  border-top: 1px solid #eee;
+  margin-bottom: 0px;
+  padding-bottom: 0;
+}
+
+.modal-footer p {
+  margin-right: auto; /* Толкаем параграф в левый угол */
+}
+
+.checkin-button {
+  width: 127px;
+  height: 36px;
+  background: #230608;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.checkin-button:hover {
+  opacity: 0.7;
+}
+
+.scrollable-area {
+  max-height: 280px; /* Ограничение высоты */
+  overflow-y: auto;
+  padding-right: 8px; 
+}
+
+.scrollable-area::-webkit-scrollbar {
+  width: 6px; /* Толщина вертикального скроллбара */
+}
+
+.scrollable-area::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Цвет полоски */
+  border-radius: 3px;
+}
+
+.scrollable-area::-webkit-scrollbar-track {
+  background: transparent; /* Цвет фона под скроллбаром */
+}
+
+.add-guest-button {
+  width: 150px;
+  height: 36px;
+  background: #230608;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border: none;
+
+}
+
+.add-guest-button:hover {
+  opacity: 0.7;
+}
+
+.remove-guest-button {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  color: #230608;
+  padding: 0;
+  right: 5px; /* не 0, а 5px, чтобы отступить */
+  top: 50%;     /* по вертикали по центру */
+  transform: translateY(-50%); /* чтобы ровно центрировать */
+}
+
+.remove-guest-button:hover {
+  background: #f5f5f5;
+}
+
+.guest-header {
+  position: relative;
+  width: 100%; /* растянуть на всю ширину родителя */
+  padding-right: 30px; /* чтобы кнопка не налезала на текст */
+  box-sizing: border-box; /* чтобы padding не ломал ширину */
+ 
+}
+
+.guest-block {
+  border-top: 1px solid #ddd;
+  padding-top: 0px;
+  margin-top: 0px;
+  border-top: none;
+}
+
+.guest-block.first {
+  border-top: none;
+}
+
+.guest-block.first .guest-header p {
+  margin-top: 0; /* убираем верхний отступ */
+  padding-top: 0; /* если есть padding, тоже уберём */
+}
+
+.custom-select-container {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.custom-select-container select {
+  width: 100%;
+  padding-right: 30px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  border-radius: 24px;
+}
+
+.amenity {
+  width: 40px;
+  height: 40px;
+  background-color: #F5F5F7;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amenity-guests {
+  width: 67px;
+  height: 40px;
+  background-color: #F5F5F7;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 3px;
+}
+
+.custom-select-container .custom-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  pointer-events: none;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.3s ease;
+  font-size: 12px;
+  color: #555;
+  user-select: none;
+  z-index: 2;
+}
+
+
+

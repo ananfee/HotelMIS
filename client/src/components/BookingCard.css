@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.room-card {
+  width: 325px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.room-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 197px;
+  overflow: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.room-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.room-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.45); /* 45% прозрачности */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500; /* Medium */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.room-header {
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+
+.rooms-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto 20px auto; /* центрируем блок, убираем верхний отступ */
+  max-width: 1400px; /* или сколько нужно */
+  justify-content: flex-start;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.room-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+
+.dropdown-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+}
+
+.room-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.amenity {
+  width: 40px;
+  height: 40px;
+  background-color: #F5F5F7;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amenity img {
+  width: 40px;
+  height: 40px;
+}
+
+.room-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.primary-btn {
+  width: 200px;
+  height: 36px;
+  background: #230608;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.icon-button {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+.primary-btn:hover {
+  opacity: 0.7;
+}
+
+.secondary-btn:hover {
+  opacity: 0.7;
+}
+
+.secondary-btn {
+  width: 127px;
+  height: 36px;
+  background: #230608;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.amenity-guests {
+  width: 63px;
+  height: 40px;
+  background-color: #F5F5F7;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 3px;
+}
+
+.amenity-guests img {
+  width: 40px;
+  height: 40px;
+}
+
+.amenity-guests span {
+  font-size: 1em; }
+
+.booking-info-text h3 {
+  font-weight: normal;
+  font-size: 12px; /* если хочешь этот размер у текста в <h3> */
+  margin: 0; /* чтобы убрать отступы */
+}
+
+.margin-none {
+  margin-top: 0;
+}

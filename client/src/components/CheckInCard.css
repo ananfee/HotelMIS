@@ -1,0 +1,150 @@
+.checkin-card {
+  width: 325px;
+  height: 365px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.checkin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+.checkin-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #2b0000;
+  justify-content: space-between;  /* распределить между краями */
+  align-items: center;   
+}
+
+.checkin-icon {
+  width: 63px;
+  height: 36px;
+  background-color: #F5F5F7;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 3px;
+}
+
+.checkin-icon img {
+  width: 36px;
+  height: 36px;
+}
+
+.icon {
+  font-size: 16px;
+}
+
+.icon-number {
+  margin-left: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.checkin-dates {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #2b0000;
+  text-align: left;
+}
+
+.checkin-subtitle {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.checkin-divider {
+  margin: 12px 0 12px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.checkin-guests {
+  flex-grow: 1;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.checkin-guests div {
+  margin-bottom: 4px;
+}
+
+.checkin-buttons {
+  display: flex;
+  align-items: center; /* чтобы "Итого:" и кнопка были по вертикали на одной линии */
+  justify-content: space-between; /* если нужно раскинуть их по краям блока */
+  gap: 10px; /* если хочешь небольшой отступ между ними */
+}
+
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-disabled {
+  background: #f0f0f0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #200000;
+  color: #fff;
+  width: 125px;
+  height: 36px;
+  background: #230608;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.rooms-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto 20px auto; /* центрируем блок, убираем верхний отступ */
+  max-width: 1400px; /* или сколько нужно */
+  justify-content: flex-start;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.amount-price {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.room-number {
+  font-weight: 600; 
+  font-size: 18px;
+}
