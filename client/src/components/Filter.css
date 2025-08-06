@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  width: 660px; /* ширина фильтра вместе с кнопкой */
+  width: 660px;
   height: 70px;
-  margin: 0 auto; /* центрируем по горизонтали */
+  margin: 0 auto;
   box-sizing: border-box;
   margin-top: 10px;
 }
@@ -12,15 +12,15 @@
 .filter-row {
   display: flex;
   align-items: center;
-  justify-content: center; /* Центрируем только форму */
-  gap: 15px; /* расстояние между формой и кнопкой */
+  justify-content: center;
+  gap: 15px;
 }
 
 .filter-center {
   display: flex;
   justify-content: center;
   flex-grow: 0;
-  width: 660px; /* фиксированная ширина формы */
+  width: 660px;
   position: relative;
 }
 
@@ -28,10 +28,8 @@
   display: flex;
   align-items: center;
   height: 70px;
-  width: 70px; /* фиксированная ширина для кнопки */
+  width: 70px;
 }
-
-/* Остальной CSS без изменений */
 
 .filter-container {
   display: flex;

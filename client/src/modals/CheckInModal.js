@@ -180,7 +180,7 @@ function CheckInModal({ isOpen, onClose, room, checkIn, checkOut, guests: guests
         childBed: hasBabyBed,
         totalAmount: totalPrice,
         guests: guestLinks,
-        employee: "http://localhost:8080/api/employees/1" // обнови ID по необходимости
+        employee: "http://localhost:8080/api/employees/1"
       };
 
       const checkInResp = await fetch('http://localhost:8080/api/checkIns', {

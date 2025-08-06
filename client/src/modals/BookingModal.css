@@ -6,13 +6,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Чтобы модальное окно было поверх всего */
-  padding: 40px; /* Added padding for overlay */
-  box-sizing: border-box; /* Include padding in width/height */
+  z-index: 1000;
+  padding: 40px;
+  box-sizing: border-box;
 
 }
 .amenity {

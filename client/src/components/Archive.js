@@ -5,13 +5,13 @@ import { ReactComponent as DeleteIcon } from '../icons/Delete.svg';
 
 const BookingCard = ({ room }) => {
   const [isCheckInModalOpen, setIsCheckInModalOpen] = useState(false);
-  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false); // Добавляем состояние
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   const handleCheckInClick = () => {
     setIsCheckInModalOpen(true);
   };
 
-  const handleBookingClick = () => { // Добавляем обработчик
+  const handleBookingClick = () => {
     setIsBookingModalOpen(true);
   };
 
@@ -19,7 +19,7 @@ const BookingCard = ({ room }) => {
     setIsCheckInModalOpen(false);
   };
 
-  const handleCloseBookingModal = () => { // Добавляем обработчик
+  const handleCloseBookingModal = () => {
     setIsBookingModalOpen(false);
   };
 
@@ -50,9 +50,9 @@ const BookingCard = ({ room }) => {
             style={{
             padding: '4px 8px',
             borderRadius: '5px',
-            backgroundColor: '#F5F5F7', // светло-серый фон
-            color: '#000',              // тёмный текст
-            fontSize: '0.8em'           // уменьшенный шрифт
+            backgroundColor: '#F5F5F7',
+            color: '#000',
+            fontSize: '0.8em'
             }}
         >
             {room.status}

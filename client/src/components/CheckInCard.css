@@ -25,7 +25,7 @@
   font-weight: 600;
   font-size: 18px;
   color: #2b0000;
-  justify-content: space-between;  /* распределить между краями */
+  justify-content: space-between;
   align-items: center;   
 }
 
@@ -92,9 +92,9 @@
 
 .checkin-buttons {
   display: flex;
-  align-items: center; /* чтобы "Итого:" и кнопка были по вертикали на одной линии */
-  justify-content: space-between; /* если нужно раскинуть их по краям блока */
-  gap: 10px; /* если хочешь небольшой отступ между ними */
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 
@@ -132,8 +132,8 @@
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
-  margin: 0 auto 20px auto; /* центрируем блок, убираем верхний отступ */
-  max-width: 1400px; /* или сколько нужно */
+  margin: 0 auto 20px auto;
+  max-width: 1400px;
   justify-content: flex-start;
   margin-bottom: 0;
   margin-top: 0;

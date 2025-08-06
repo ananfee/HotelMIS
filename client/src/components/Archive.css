@@ -70,8 +70,8 @@
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
-  margin: 0 auto 20px auto; /* центрируем блок, убираем верхний отступ */
-  max-width: 1400px; /* или сколько нужно */
+  margin: 0 auto 20px auto;
+  max-width: 1400px;
   justify-content: flex-start;
   margin-bottom: 0;
   margin-top: 0;
@@ -189,8 +189,8 @@
 
 .booking-info-text h3 {
   font-weight: normal;
-  font-size: 12px; /* если хочешь этот размер у текста в <h3> */
-  margin: 0; /* чтобы убрать отступы */
+  font-size: 12px;
+  margin: 0;
 }
 
 .margin-none {

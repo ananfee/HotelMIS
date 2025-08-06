@@ -146,15 +146,15 @@ function EmptyCheckInModal({ isOpen, onClose, booking }) {
   const normalizePhone = (phone) => {
   const digits = phone.replace(/\D/g, '');
   if (digits.length === 11 && digits.startsWith('8')) {
-    return '+7' + digits.slice(1); // 8903 → +7903
+    return '+7' + digits.slice(1);
   }
   if (digits.length === 11 && digits.startsWith('7')) {
-    return '+7' + digits.slice(1); // 7903 → +7903
+    return '+7' + digits.slice(1);
   }
   if (digits.length === 10) {
-    return '+7' + digits; // 9039843164 → +79039843164
+    return '+7' + digits;
   }
-  return '+' + digits; // fallback
+  return '+' + digits;
 };
 
   const findGuestByPhoneNumber = async (phoneNumber) => {
@@ -195,13 +195,11 @@ function EmptyCheckInModal({ isOpen, onClose, booking }) {
       for (const guest of guests) {
         const phone = guest.phone.trim();
 
-        // Поиск гостя по телефону
         const foundGuest = await findGuestByPhoneNumber(phone);
 
         if (foundGuest) {
           guestLinks.push(foundGuest._links.self.href);
         } else {
-          // Создаем нового гостя, если не найден
           const guestData = {
             lastName: guest.surname.trim(),
             firstName: guest.name.trim(),
@@ -227,7 +225,6 @@ function EmptyCheckInModal({ isOpen, onClose, booking }) {
         }
       }
 
-      // Получаем ссылку на комнату
       const roomLink = room?._links?.self?.href || `http://localhost:8080/api/rooms/${room?.id}`;
 
       const formatDateString = (date) => {
@@ -252,7 +249,7 @@ function EmptyCheckInModal({ isOpen, onClose, booking }) {
         childBed: hasBabyBed,
         totalAmount: totalPrice,
         guests: guestLinks,
-        employee: 'http://localhost:8080/api/employees/1', // обнови ID сотрудника по необходимости
+        employee: 'http://localhost:8080/api/employees/1',
         booking: `http://localhost:8080/api/bookings/${booking.id}`,
       };
 
@@ -267,7 +264,6 @@ function EmptyCheckInModal({ isOpen, onClose, booking }) {
         throw new Error(`Ошибка создания заселения: ${errorText}`);
       }
 
-      // ** Здесь добавляем обновление статуса брони **
       const statusUrl = `http://localhost:8080/api/bookings/${booking.id}/bookingStatus`;
       const statusBody = 'http://localhost:8080/api/bookingStatuses/2';
 
@@ -283,7 +279,6 @@ function EmptyCheckInModal({ isOpen, onClose, booking }) {
         const errorText = await statusResp.text();
         throw new Error(`Ошибка обновления статуса брони: ${errorText}`);
       }
-      // ** Конец обновления статуса **
 
       alert('Заселение успешно выполнено!');
       onClose();
